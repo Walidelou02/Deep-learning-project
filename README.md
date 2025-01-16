@@ -1,0 +1,1 @@
+Dans ce projet on a deux branches une pour le frontend et une pour le backend le branche du frontend contient le code dotnet et les interfaces tandis que la branche main contient le backedn c-a-d notre modele et notre code python
