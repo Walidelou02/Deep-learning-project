@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Deep_Learning.MainPage"
+             BackgroundColor="Black"
+             Title="">
+
+
+    <Frame CornerRadius="60" Padding="0" HasShadow="False" BackgroundColor="Transparent" MaximumHeightRequest="500" MinimumHeightRequest="500" 
+           MinimumWidthRequest="500" MaximumWidthRequest="1000">
+        <Grid >
+            <!-- Background Image -->
+            <Image Source="plant_bg_photo.jpg" Aspect="AspectFill" />
+
+            <!-- Overlay -->
+            <Grid BackgroundColor="Black" Opacity="0.5" />
+
+            <!-- Content -->
+            <StackLayout  Padding="100" VerticalOptions="Center">
+                <!-- Title -->
+                <Label Text="Detect Plant disease"
+                       FontSize="24"
+                       TextColor="White"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,0,0,40" 
+                        />
+
+                <FlexLayout Direction="Row" JustifyContent="SpaceBetween">
+                    <!-- Upload Button -->
+                    <Button Text="Upload image"
+                            BackgroundColor="Black"
+                            TextColor="White"
+                            CornerRadius="10"
+                            Padding="10"
+                            HorizontalOptions="Center" MaximumHeightRequest="100" MinimumHeightRequest="100" 
+                            MaximumWidthRequest="150" MinimumWidthRequest="150"
+                            Clicked="OnUploadImageClicked"/>
+
+                    <!-- Result -->
+                    <Frame BackgroundColor="Black"
+                            Opacity="0.8"
+                            CornerRadius="10"
+                            Padding="30"
+                            MaximumHeightRequest="200" MinimumHeightRequest="200" MaximumWidthRequest="300" MinimumWidthRequest="300">
+                        <StackLayout>
+                            <Label Text="Result"
+                                FontSize="18"
+                                TextColor="White"
+                                HorizontalTextAlignment="Center" 
+                            />
+                            <Label Text="" x:Name="resultLabel" HorizontalTextAlignment="Center" Margin="20" TextColor="LightGreen">
+
+                            </Label>
+                        </StackLayout>
+                        
+                        
+                    </Frame>
+                </FlexLayout>
+                
+            </StackLayout>
+        </Grid>
+    </Frame>
+    
+</ContentPage>
+
